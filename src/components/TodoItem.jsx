@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useTodo } from "../contexts/TodoContext"; // Make sure this path is correct
+import { useTodo } from "../contexts/TodoContext";
+import { motion } from "framer-motion";
 
 function TodoItem({ todo }) {
   const { deleteTodo, toggleComplete, updateTodo } = useTodo();
   const [isEditing, setIsEditing] = useState(false);
   const [todoText, setTodoText] = useState(todo.todo);
 
-  // ✅ Save updated todo text
   const handleUpdate = (e) => {
     e.preventDefault();
     if (todoText.trim()) {
@@ -16,30 +16,42 @@ function TodoItem({ todo }) {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 border-b bg-white ">
-      <div className="flex items-center gap-2 w-full">
+    <motion.div
+      className={`flex items-center justify-between px-4 py-3 rounded-lg border transition-all duration-300 shadow-sm ${
+        todo.completed
+          ? "bg-green-100 border-green-300"
+          : "bg-white border-gray-200"
+      }`}
+      whileHover={{ scale: 1.01 }}
+    >
+      {/* Left side */}
+      <div className="flex items-center gap-3 w-full">
         {/* ✅ Checkbox */}
         <input
           type="checkbox"
           checked={todo.completed}
           onChange={() => toggleComplete(todo.id)}
+          className="h-5 w-5 accent-green-600 transition duration-200"
         />
 
-        {/* 📝 Edit input or display text */}
+        {/* ✏️ Editable Text */}
         {isEditing ? (
-          <form onSubmit={handleUpdate} className="flex-grow">
+          <form onSubmit={handleUpdate} className="w-full">
             <input
               value={todoText}
               onChange={(e) => setTodoText(e.target.value)}
-              autoFocus
               onBlur={handleUpdate}
-              className="border px-2 py-1 rounded w-full"
+              autoFocus
+              className="w-full border rounded px-2 py-1 text-sm focus:outline-blue-400"
             />
           </form>
         ) : (
           <span
-            className={`flex-grow cursor-default ${
-              todo.completed ? "line-through text-gray-400" : ""
+            onClick={() => setIsEditing(true)}
+            className={`cursor-pointer text-base transition-all duration-200 ${
+              todo.completed
+                ? "line-through text-gray-400"
+                : "text-gray-800 hover:text-blue-600"
             }`}
           >
             {todo.todo}
@@ -47,29 +59,16 @@ function TodoItem({ todo }) {
         )}
       </div>
 
-      <div className="flex items-center gap-2 ml-4">
-        {/* ✏️ Edit Button */}
-        {!isEditing && (
-          <button
-            onClick={() => setIsEditing(true)}
-            className="text-blue-500 hover:text-blue-700"
-            title="Edit"
-          >
-            ✏️
-          </button>
-        )}
-
-        {/* ❌ Delete Button */}
-        <button
-          onClick={() => deleteTodo(todo.id)}
-          className="text-red-500 hover:text-red-700"
-          title="Delete"
-        >
-          ❌
-        </button>
-      </div>
-    </div>
+      {/* ❌ Delete button */}
+      <button
+        onClick={() => deleteTodo(todo.id)}
+        className="text-red-500 hover:text-red-700 text-xl ml-3"
+      >
+        ❌
+      </button>
+    </motion.div>
   );
 }
 
 export default TodoItem;
+
