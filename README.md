@@ -60,25 +60,6 @@ This project was created to reinforce core React concepts like component-based a
 
 ---
 
-## 📁 Project Structure
-
-Todo_Using_React/
-├── public/
-├── src/
-│ ├── components/
-│ │ ├── TodoForm.jsx
-│ │ ├── TodoItem.jsx
-│ │ └── TodoList.jsx
-│ ├── contexts/
-│ │ └── TodoContext.jsx
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── tailwind.config.js
-├── vite.config.js
-├── package.json
-└── README.md
-
 
 
 🙏 Acknowledgements
