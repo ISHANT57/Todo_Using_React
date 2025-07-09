@@ -68,7 +68,7 @@ This project was created to reinforce core React concepts like component-based a
 🎥 This app is a project I built after learning React through his “Chai aur React” playlist — a beginner-friendly, real-world introduction to modern React.
 
 ▶️ Watch Chai aur React Playlist:
-https://www.youtube.com/playlist?list=PLu71SKxNbfoDBNF5s-WH6aJo2jd2FjQ5b
+https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige
 
 
 
