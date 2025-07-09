@@ -1,17 +1,98 @@
-<<<<<<< HEAD
-# Simple_Todo
-Simple Todo using React and local storage 
-=======
-# React + Vite
+# ⚛️ Todo App Using React + Context API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-ISHANT57%2FTodo__Using__React-blue?logo=github)](https://github.com/ISHANT57/Todo_Using_React)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?logo=vercel)](https://ishant57.github.io/Todo_Using_React/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Currently, two official plugins are available:
+A clean, minimalist, and fully responsive **Todo App** built using **React**, **Context API**, **Tailwind CSS**, and **Vite**.  
+This project was created to reinforce core React concepts like component-based architecture, state management, and global context.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📚 Table of Contents
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> f5300aa (🎉 First commit: React + Tailwind Todo App)
+- [🚀 Live Demo](#-live-demo)
+- [🎯 Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [📦 Installation & Setup](#-installation--setup)
+- [📸 Screenshots](#-screenshots)
+- [🙏 Acknowledgements](#-acknowledgements)
+- [📄 License](#-license)
+- [🤝 Connect with Me](#-connect-with-me)
+
+---
+
+## 🚀 Live Demo
+
+🎯 **Try the App:**  
+🔗 [Live Project on GitHub Pages](https://ishant57.github.io/Todo_Using_React/)
+
+💻 **View Source Code:**  
+📦 [GitHub Repository](https://github.com/ISHANT57/Todo_Using_React)
+
+---
+
+## 🎯 Features
+
+- ➕ Add new todos
+- ✏️ Edit and update existing todos
+- 🗑️ Delete todos
+- ✅ Toggle completion status
+- 💾 Persistent data using `localStorage`
+- 🧠 Global state managed via **React Context API**
+- 🎨 Styled with **Tailwind CSS**
+- ⚡ Developed and built using **Vite**
+- 📱 Mobile-first and fully responsive design
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology       | Purpose                         |
+|------------------|----------------------------------|
+| **React**        | UI Library for building components |
+| **Context API**  | Global state management           |
+| **Tailwind CSS** | Utility-first CSS framework       |
+| **Vite**         | Development & build tool          |
+| **localStorage** | Persistent browser-side storage   |
+| **GitHub Pages** | Static site hosting for deployment|
+
+---
+
+## 📁 Project Structure
+
+Todo_Using_React/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── TodoForm.jsx
+│ │ ├── TodoItem.jsx
+│ │ └── TodoList.jsx
+│ ├── contexts/
+│ │ └── TodoContext.jsx
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+
+
+
+🙏 Acknowledgements
+💖 A huge thanks to Hitesh Choudhary Sir and his amazing teaching through the Chai aur Code YouTube channel.
+
+🎥 This app is a project I built after learning React through his “Chai aur React” playlist — a beginner-friendly, real-world introduction to modern React.
+
+▶️ Watch Chai aur React Playlist:
+https://www.youtube.com/playlist?list=PLu71SKxNbfoDBNF5s-WH6aJo2jd2FjQ5b
+
+
+
+🤝 Connect with Me
+Let's connect and collaborate on cool projects!
+🌐 Portfolio: coming soon
+🐙 GitHub: @ISHANT57
+📧 Email: ishantbhoyar59@gmail.com
