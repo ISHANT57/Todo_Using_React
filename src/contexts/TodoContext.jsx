@@ -31,7 +31,8 @@ export const TodoProvider = ({ children }) => {
   const updateTodo = (id, updatedText) =>
     setTodos((prev) =>
       prev.map((todo) =>
-        todo.id === id ? { ...todo, todo: updatedText } : todo
+        todo.id === id ? { ...todo, text: updatedText } : todo
+      
       )
     );
 
